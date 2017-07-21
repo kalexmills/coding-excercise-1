@@ -2,3 +2,5 @@ target/*
 *.swp
 .classpath
 .project
+/bin/
+/target/

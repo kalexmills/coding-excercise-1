@@ -4,7 +4,7 @@ package com.myorg.codingexcercise;
  *
  * Created by kamoorr on 7/14/17.
  */
-public class Item {
+public class Item implements Comparable<Item> {
 
     private String itemId;
     private int cubicFt;
@@ -22,4 +22,15 @@ public class Item {
     	return cubicFt;
     }
 
+    @Override
+    public int compareTo(Item o) {
+      return this.getCubicFt() - o.getCubicFt();
+    }
+    
+    // for debugging
+    public String toString() {
+      return itemId + " " + cubicFt;
+    }
+
+    
 }
